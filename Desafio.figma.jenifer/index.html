@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/button.css">
+    <link rel="stylesheet" href="./style/modal.css">
+    <link rel="stylesheet" href="./style/records.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>CRUD User Interface</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="headerTitle">
+            Cadastro do Usuário
+        </h1>
+    </header>
+
+    <main>
+        <button type="button" class="button blue" id="userRegistration">
+            Cadastrar Usuário
+        </button>
+
+        <table class="records sortable">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Celular</th>
+                    <th>Cidade</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody id="corpoTabela">
+                <!-- Conteúdo da tabela gerado dinamicamente -->
+            </tbody>
+        </table>
+
+        <section class="modal" id="modal">
+            <section class="modalContent">
+                <header class="modalHeader">
+                    <h2>Novo Usuário</h2>
+                    <span class="modalClose" id="modalClose">&#10006;</span>
+                </header>
+
+                <form class="modalForm">
+                    <input type="text" class="modalField" placeholder="Nome" id="name">
+                    <input type="text" class="modalField" placeholder="E-mail" id="email">
+                    <input type="text" class="modalField" placeholder="Celular" id="cel">
+                    <input type="text" class="modalField" placeholder="Cidade" id="city">
+                </form>
+
+                <footer class="modalFooter">
+                    <button class="button green" id="saveValues">Salvar</button>
+                    <button class="button red" id="cancelButton">Cancelar</button>
+                </footer>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        &copy; Jenifer Clemente
+    </footer>
+
+    <script src="./script.js" defer></script>
+</body>
+
+</html>
